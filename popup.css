@@ -1,74 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-*, *::before, *::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-:root {
-  --bg: #0f0f0f;
-  --surface: #181818;
-  --border: #272727;
-  --text: #f1f1f1;
-  --text-muted: #aaa;
-  --accent: #ff0000;
-  --accent-dim: rgba(255, 0, 0, 0.12);
-  --radius: 12px;
-}
-
 body {
-  width: 320px;
-  font-family: 'DM Sans', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  background: #ffffff;
+  width: 340px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.08);
+  overflow: hidden;
 }
 
 .card-header {
-  padding: 20px 20px 16px;
-  border-bottom: 1px solid var(--border);
-  position: relative;
-}
-
-.card-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--accent);
+  background: #cc0000;
+  padding: 16px 20px;
 }
 
 .title {
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: -0.2px;
-  color: var(--text);
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.2px;
 }
 
 .subtitle {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
   margin-top: 3px;
 }
 
 .card-body {
-  padding: 18px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  flex: 1;
+  padding: 20px;
 }
 
 .switch-row {
@@ -76,22 +50,13 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 12px 14px;
   cursor: pointer;
-  transition: border-color 0.2s;
 }
 
-.switch-row:hover {
-  border-color: #3a3a3a;
-}
-
-.switch-row span {
+.switch-row > span {
   font-size: 13px;
   font-weight: 500;
-  color: var(--text);
+  color: #212121;
   line-height: 1.4;
 }
 
@@ -107,76 +72,73 @@ body {
   opacity: 0;
   width: 0;
   height: 0;
-  position: absolute;
 }
 
 .slider {
   position: absolute;
   inset: 0;
-  background: #2a2a2a;
-  border-radius: 999px;
+  background: #cccccc;
+  border-radius: 11px;
+  transition: background 0.2s ease;
   cursor: pointer;
-  transition: background 0.25s;
-  border: 1px solid var(--border);
 }
 
-.slider::after {
+.slider::before {
   content: '';
   position: absolute;
   width: 16px;
   height: 16px;
-  left: 2px;
-  top: 2px;
-  background: #666;
+  left: 3px;
+  top: 3px;
+  background: #ffffff;
   border-radius: 50%;
-  transition: transform 0.25s, background 0.25s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
 }
 
 .switch input:checked + .slider {
-  background: var(--accent-dim);
-  border-color: var(--accent);
+  background: #cc0000;
 }
 
-.switch input:checked + .slider::after {
+.switch input:checked + .slider::before {
   transform: translateX(18px);
-  background: var(--accent);
 }
 
 .hint {
-  font-size: 12px;
-  color: var(--text-muted);
+  margin-top: 14px;
+  font-size: 11.5px;
+  color: #757575;
   line-height: 1.6;
-  padding: 10px 12px;
-  background: var(--surface);
-  border-left: 2px solid var(--border);
-  border-radius: 0 6px 6px 0;
+  border-left: 3px solid #cc0000;
+  padding-left: 10px;
 }
 
 .card-footer {
-  padding: 14px 20px;
-  border-top: 1px solid var(--border);
+  padding: 12px 20px;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .btn {
-  width: 100%;
-  padding: 9px 16px;
   background: transparent;
-  color: var(--text-muted);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-family: 'DM Sans', sans-serif;
+  color: #cc0000;
+  border: none;
+  padding: 8px 16px;
+  font-family: 'Roboto', sans-serif;
   font-size: 13px;
   font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  transition: background 0.15s ease;
 }
 
 .btn:hover {
-  background: var(--surface);
-  color: var(--text);
-  border-color: #3a3a3a;
+  background: rgba(204,0,0,0.08);
 }
 
 .btn:active {
-  transform: scale(0.98);
+  background: rgba(204,0,0,0.16);
 }
