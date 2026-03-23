@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Remove youtube css radius",
-  "version": "1.2.0",
+  "version": "1.2.1",
  "description": "Remove border-radius CSS on YouTube desktop and mobile.",
   "permissions": [
     "scripting",
