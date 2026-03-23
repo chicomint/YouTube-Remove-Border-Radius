@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "YouTube - Remove Border Radius (player-only)",
+  "name": "Remove youtube css radius",
   "version": "1.2.0",
  "description": "Remove border-radius CSS on YouTube desktop and mobile.",
   "permissions": [
@@ -35,7 +35,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "com.program1519.youtube.removeborder@example.com"
+      "id": "com.chicomint.youtube.removeborder@example.com"
     }
   }
 }
