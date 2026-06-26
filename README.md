@@ -4,4 +4,4 @@ youtube ui is suck i make a Extension it remove all "Border Radius css"
 
 <a href="https://microsoftedge.microsoft.com/addons/detail/youtube-remove-border-r/amjbjedkkalbnjaoehenmfalcdhpfjag" class="reflective-btn">install (Edge Add-ons)</a>
 <br><br>
-<img src="https://addons.mozilla.org/user-media/previews/full/337/337525.png?modified=1760515221" >
+<img src="https://files.catbox.moe/xkdylb.png" >
