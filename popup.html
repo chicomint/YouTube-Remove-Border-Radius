@@ -10,22 +10,59 @@
   <div class="card">
     <header class="card-header">
       <div class="title">Setting </div>
-      <div class="subtitle">Yeah....setting  </div>
+      <div class="subtitle">:3 </div>
     </header>
 
     <main class="card-body">
-      <label class="switch-row">
-        <span>Toggle (Video_Player only)</span>
+      <div class="switch-row">
+        <span>Toggle (Video Player only)</span>
         <label class="switch">
           <input id="toggle" type="checkbox">
           <span class="slider"></span>
         </label>
-      </label>
+      </div>
 
-      <p class="hint">When enabled, it will remove the rounded corners of the video player only — other parts of YouTube will remain unchanged.</p>
-      
-    
- 
+      <section class="preview" aria-live="polite">
+        <div class="preview-top">
+          <span class="preview-title">Example</span>
+          <span id="modeText" class="mode-pill">All YouTube</span>
+        </div>
+
+        <div id="exampleBox" class="example example-all" aria-label="Border radius example">
+          <div class="mock-player">
+            <span class="mock-info">i</span>
+            <button class="mock-play" type="button" aria-label="Preview play button">
+              <span></span>
+            </button>
+            <div class="mock-controls">
+              <div class="mock-progress">
+                <span class="mock-progress-played"></span>
+                <span class="mock-progress-buffer"></span>
+                <span class="mock-progress-dot"></span>
+              </div>
+              <div class="mock-control-row">
+                <span class="mock-pause"></span>
+                <span class="mock-next"></span>
+                <span class="mock-volume"></span>
+                <span class="mock-volume-line"></span>
+                <span class="mock-time">3:28 / 6:45</span>
+                <span class="mock-spacer"></span>
+                <span class="mock-clock"></span>
+                <span class="mock-gear"></span>
+                <span class="mock-theater"></span>
+                <span class="mock-fullscreen"></span>
+              </div>
+            </div>
+          </div>
+          <div class="mock-page-parts" aria-hidden="true">
+            <span class="mock-page-card"></span>
+            <span class="mock-page-card"></span>
+            <span class="mock-page-card"></span>
+          </div>
+        </div>
+      </section>
+
+      <p id="hint" class="hint">Off: the player and the small page cards are all square.</p>
 
     </main>
 
